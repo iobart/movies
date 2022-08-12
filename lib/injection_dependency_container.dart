@@ -1,0 +1,53 @@
+
+
+
+import 'package:get_it/get_it.dart';
+import 'package:movies/src/app/features/presentation/bloc/tv_show/tv_show_bloc.dart';
+import 'package:movies/src/app/features/tv_show/data/datasources/tv_show_remote_data_source.dart';
+import 'package:movies/src/app/features/tv_show/data/repositories/tv_show_repository_impl.dart';
+import 'package:movies/src/app/utils/failure_to_message.dart';
+import 'package:movies/src/app/utils/url_path_converter.dart';
+import 'package:movies/src/domain/repositories/tv_show_repository.dart';
+import 'package:movies/src/domain/usecases/get_popular_tv_shows.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+final sl = GetIt.instance;
+
+Future<void> init() async {
+  //! Features - TvShow
+  //? Bloc
+  sl.registerLazySingleton(
+    () => TvShowBloc(
+      getPopularTvShows: sl(),
+      message: sl(),
+    ),
+  );
+
+  //? UseCases
+  sl.registerLazySingleton(() => GetPopularTvShow(sl()));
+
+  //? Repository
+  sl.registerLazySingleton<TvShowRepository>(
+    () => TvShowRepositoryImpl(
+      remoteDataSource: sl(),
+    ),
+  );
+
+  //? Data Sources
+  sl.registerLazySingleton<TvShowRemoteDataSource>(
+    () => TvShowRemoteDataSourceImpl(
+      client: sl(),
+      urlPathConverter: sl(),
+    ),
+  );
+
+  //! Core
+  sl.registerLazySingleton(() => UrlPathConverter());
+  sl.registerLazySingleton(() => Message());
+
+  //! External
+  final sharedPreferences = await SharedPreferences.getInstance();
+  sl.registerLazySingleton(() => sharedPreferences);
+  sl.registerLazySingleton(() => http.Client());
+}

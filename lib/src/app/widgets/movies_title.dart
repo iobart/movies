@@ -22,6 +22,7 @@ class MoviesTitle extends StatelessWidget {
           style: TextStyle(
             color: whiteColor,
             fontSize: fontSize,
+            decoration: TextDecoration.none,
             fontWeight: FontWeight.bold,
           )),
     );

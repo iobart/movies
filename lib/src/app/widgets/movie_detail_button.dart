@@ -22,7 +22,7 @@ class MovieDetailButton extends StatelessWidget {
           children: [
             Text(
               text,
-              style:  TextStyle(color: yellowColor, fontWeight: FontWeight.bold),
+              style:  TextStyle(color: yellowColor, fontWeight: FontWeight.bold,decoration: TextDecoration.none,fontSize: 14),
             ),
             const SizedBox(
               width: 10,

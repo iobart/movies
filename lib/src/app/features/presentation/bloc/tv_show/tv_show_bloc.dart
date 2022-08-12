@@ -33,14 +33,14 @@ class TvShowBloc extends Bloc<TvShowEvent, TvShowState> {
 
     switch (event.type) {
       case TvShowListType.popular:
-        failureOrTvShows = (await getPopularTvShows(NoParams())) as Either<Failure, List<TvShow>>?;
+        failureOrTvShows = (await getPopularTvShows(NoParams()));
         break;
       default:
         failureOrTvShows = Left(ServerFailure());
         break;
     }
 
-    failureOrTvShows?.fold(
+    failureOrTvShows.fold(
             (failure) => emit(
           state.copyWith(
             loading: false,
