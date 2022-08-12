@@ -20,7 +20,7 @@ class CardForm extends StatelessWidget {
       padding: padding ?? EdgeInsets.fromLTRB(40, 40, 40, (paddingBottom + 6)),
       decoration:  BoxDecoration(
         backgroundBlendMode: BlendMode.hardLight,
-        color: ComponentsAppTheme.blackColor.withOpacity(0.8),
+        color: blackColor.withOpacity(0.8),
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movies/src/app/pages/login/login_controller.dart';
 import 'package:movies/src/app/utils/components_app_theme.dart';
 import 'package:movies/src/app/widgets/card_form.dart';
 import 'package:movies/src/app/widgets/generic_button.dart';
 import 'package:movies/src/app/widgets/input_generic.dart';
+import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                         transform: Matrix4.translationValues(0, snap?0:280, 0),
                         child: GenericButton(
                           text: 'Log in',
-                          colorButton: ComponentsAppTheme.whiteColor,
+                          colorButton: whiteColor,
                           textStyle: Theme.of(context).textTheme.bodyText2,
                           height: 50,
                           width: 150,
@@ -117,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   icon: Icon(
                     Icons.clear,
-                    color: ComponentsAppTheme.grayColor,
+                    color: greyColor,
                   ))),
           InputGeneric(
             controller: controller.inputController,

@@ -1,0 +1,12 @@
+import 'package:dartz/dartz.dart';
+import 'package:movies/src/domain/entities/tv_show.dart';
+import 'package:movies/src/error/failures.dart';
+
+/// Repository of methods to have usecases of TV Shows
+abstract class TvShowRepository {
+  /// Search for popular TV Shows.
+  ///
+  /// Gets a list of Tv shows that are popular.
+  /// If there are no results, an failure is returned.
+  Future<Either<Failure, List<TvShow>>> getPopularTvShows();
+}

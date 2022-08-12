@@ -7,36 +7,36 @@ class AppTheme {
   static ThemeData dark() {
     final ThemeData theme = ThemeData(
       fontFamily: 'Gilroy',
-      primaryColor: ComponentsAppTheme.yellowColor,
+      primaryColor: yellowColor,
       textTheme: TextTheme(
         headline1: TextStyle(
             fontSize: 72.0,
             fontWeight: FontWeight.bold,
-            color: ComponentsAppTheme.whiteColor),
+            color:whiteColor),
         headline6:
-            TextStyle(fontSize: 36.0, color: ComponentsAppTheme.whiteColor),
+            TextStyle(fontSize: 36.0, color: whiteColor),
         headline4:
-            TextStyle(fontSize: 24.0, color: ComponentsAppTheme.whiteColor),
+            TextStyle(fontSize: 24.0, color: whiteColor),
         bodyText2:
-            TextStyle(fontSize: 14.0, color: ComponentsAppTheme.blackColor),
+            TextStyle(fontSize: 14.0, color: blackColor),
         bodyText1: TextStyle(
           fontSize: 12.0,
-          color: ComponentsAppTheme.whiteColor,
+          color: whiteColor,
           decoration: TextDecoration.underline,
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
 
         hintStyle: TextStyle(
-          color: ComponentsAppTheme.grayColor,
+          color: greyColor,
         ),
         focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: ComponentsAppTheme.grayColor)),
+            borderSide: BorderSide(color: greyColor)),
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: ComponentsAppTheme.grayColor),
+          borderSide: BorderSide(color: greyColor),
         ),
         border: UnderlineInputBorder(
-          borderSide: BorderSide(color: ComponentsAppTheme.grayColor),
+          borderSide: BorderSide(color: greyColor),
         ),
       ),
       scaffoldBackgroundColor: Colors.white,
@@ -47,8 +47,8 @@ class AppTheme {
 
     return theme.copyWith(
       colorScheme: theme.colorScheme.copyWith(
-        primary: ComponentsAppTheme.yellowColor,
-        secondary: ComponentsAppTheme.whiteColor,
+        primary: yellowColor,
+        secondary: whiteColor,
       ),
     );
   }
