@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies/src/app/features/presentation/bloc/auth_event.dart';
 import 'package:movies/src/app/utils/components_app_theme.dart';
 import 'package:movies/src/app/widgets/movies_action_button.dart';
 
 import 'home_page.dart';
-
 
 class NavigatorPage extends StatefulWidget {
   const NavigatorPage({Key? key}) : super(key: key);
@@ -18,7 +15,8 @@ class _NavigatorPageState extends State<NavigatorPage> {
   int _selectedIndex = 0;
 
   /// List of options depends on the selected index
-  static  final List<Map<String, dynamic>> _widgetPageOptions = <Map<String, dynamic>>[
+  static final List<Map<String, dynamic>> _widgetPageOptions =
+      <Map<String, dynamic>>[
     {
       'title': 'Home',
       "icon": Icons.home_filled,
@@ -27,18 +25,14 @@ class _NavigatorPageState extends State<NavigatorPage> {
     {
       'title': 'Favorites',
       "icon": Icons.favorite_border_rounded,
-      "page": '',
+      "page": const HomePage(),
     },
     {
       'title': 'Recent',
       "icon": Icons.settings_backup_restore_rounded,
-      "page": ''
+      "page": const HomePage()
     },
-    {
-      'title': 'Search',
-      "icon": Icons.search_rounded,
-      "page": ''
-    }
+    {'title': 'Search', "icon": Icons.search_rounded, "page": const HomePage()}
   ];
 
   void _onItemTapped(int index) {
@@ -49,10 +43,8 @@ class _NavigatorPageState extends State<NavigatorPage> {
 
   @override
   Widget build(BuildContext context) {
-  //  final authProvider = BlocProvider.of<AuthBloc>(context, listen: false);
-
     void _onSettings() {
-   //   authProvider.add(AuthLogoutEvent());
+      Navigator.pop(context);
     }
 
     return Scaffold(

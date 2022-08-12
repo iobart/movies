@@ -3,13 +3,13 @@ import 'package:movies/src/error/failures.dart';
 
 /// Class to convert data into a URI path.
 class UrlPathConverter {
-  static const baseUrl = "api.themoviedb.org"; // TODO: add to a environment variables file
-  static const basePath = "/3/tv"; // TODO: add to a add to a environment variables file
+  static const baseUrl = "api.themoviedb.org";
+  static const basePath = "/3/tv";
   static const baseQueryParams = {
     "api_key": "1e3511856589abcb810cf090d8dc66ce",
     "language": "en-US",
     "page": "1",
-  }; // TODO: add to a environment variables file
+  };
 
   /// Convert url path to a URI.
   ///

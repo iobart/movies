@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           }
 
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
             child: Column(
               children: [
                 MovieList(

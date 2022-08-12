@@ -2,11 +2,11 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:movies/src/app/utils/failure_to_message.dart';
+import 'package:movies/src/domain/entities/tv_show.dart';
 import 'package:movies/src/domain/usecases/get_popular_tv_shows.dart';
 import 'package:movies/src/error/failures.dart';
+import 'package:movies/src/usecases/usecase.dart';
 
-import '../../../../../domain/entities/tv_show.dart';
-import '../../../../../usecases/usecase.dart';
 
 part 'tv_show_event.dart';
 part 'tv_show_state.dart';

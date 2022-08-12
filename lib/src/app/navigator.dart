@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'features/presentation/pages/home_page.dart';
+
+import 'features/presentation/pages/navigator_page.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final routesMap = {
       '/home': MaterialPageRoute(
-        builder: (_) =>  const HomePage(),
+        builder: (_) =>  const NavigatorPage(),
       ),
     };
 
