@@ -33,4 +33,15 @@ class TvShowRepositoryImpl extends TvShowRepository {
     }
   }
 
+  @override
+  Future<Either<Failure, List<TvShow>>> getAiringTodayTvShows() async {
+    return await _getTvShows(() => remoteDataSource.getAiringTodayTvShows());
+  }
+
+  @override
+  Future<Either<Failure, List<TvShow>>> getRecommendedTvShows() async{
+
+    return await _getTvShows(() => remoteDataSource.getRecommendedTvShows());
+  }
+
 }

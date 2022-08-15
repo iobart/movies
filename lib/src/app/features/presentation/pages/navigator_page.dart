@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies/src/app/features/presentation/pages/recent_page.dart';
 import 'package:movies/src/app/utils/components_app_theme.dart';
 import 'package:movies/src/app/widgets/movies_action_button.dart';
 
@@ -30,7 +31,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
     {
       'title': 'Recent',
       "icon": Icons.settings_backup_restore_rounded,
-      "page": const HomePage()
+      "page": const RecentPage(),
     },
     {'title': 'Search', "icon": Icons.search_rounded, "page": const HomePage()}
   ];

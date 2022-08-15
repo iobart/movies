@@ -19,7 +19,7 @@ class MovieList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void _onSeeAll() {
-     // Navigator.pushNamed(context, RoutesPages.posterDetail.name);
+      Navigator.pushNamed(context, '/detailPoster');
     }
 
     return Container(

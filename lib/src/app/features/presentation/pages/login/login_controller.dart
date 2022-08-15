@@ -37,7 +37,7 @@ class LoginController {
       if (existUser.isNotEmpty) {
         Navigator.pushNamed(_context, '/home');
       } else {
-        alertError('Usuario o contraseña incorrectos');
+        alertError('User or password is incorrect');
       }
     }
   }
